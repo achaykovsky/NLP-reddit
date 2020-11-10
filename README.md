@@ -1,2 +1,2 @@
-# NLP-reddit
-Natural Language Processing course: exercises on reddit corpus
+# Natural Language Processing
+Natural Language Processing course: exercises using reddit corpus.
