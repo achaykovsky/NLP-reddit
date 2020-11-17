@@ -77,7 +77,7 @@ The assignment had 2 parts:
 	
 	
 	You can see the improvement from bigrams sentences to trigrams sentences.
-	On the trigrams structure, some of the sentences have a little more sense, and sometimes they are even fully coherent.
+	On the trigrams structure, some of the sentences make a little more sense, and sometimes they are even fully coherent.
 	Of course, some of them are could be just the original sentences.
 	
 	Note: Every randomized sentence is independent and doesn't rely on the sentence before it.
