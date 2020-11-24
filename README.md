@@ -22,8 +22,11 @@ Albania, Argentina, Cyprus, Georgia and Malta.
 
 The assignment had 2 parts:
 1. Calculating the probabilities of a few random sentences that were given to us:
+
 	**a.** Unigram sentence probability calculation using Laplace Smoothing.
+	
 	**b.** Bigram sentence probability calculation using Backoff algorithm.
+	
 	**c.** Trigram aentence probability calculation using Linear Interpolation.
 	
 2. Generate random sentences using unigrams vs bigrams vs trigrams.
