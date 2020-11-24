@@ -21,6 +21,7 @@ The corpus consisted of 5 TXT files from 5 different countries that are based on
 Albania, Argentina, Cyprus, Georgia and Malta.
 
 The assignment had 2 parts:
+
 1. Calculating the probabilities of a few random sentences that were given to us:
 
 	**a.** Unigram sentence probability calculation using Laplace Smoothing.
@@ -110,9 +111,11 @@ Each of the tasks classified by 3 three types of features:
 1. Bag Of Words (all of the words in the corpus).
 2. Manual features (features I chose manually to improve the accuracy)
 3. 100 best words (100 best words to classify chosen automatically by k-best function).
+
 The classification using Linear Regression and Multinomial Naive Bais.
+
 After the classification, we make a ten fold cross validation to calculate the accuracy.
 
-The classification results:
+**The classification results:**
 
 ![classificationResults](https://user-images.githubusercontent.com/49001453/100139758-9b479b00-2e98-11eb-93ff-45e122fabb7c.PNG)
