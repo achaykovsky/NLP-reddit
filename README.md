@@ -22,9 +22,9 @@ Albania, Argentina, Cyprus, Georgia and Malta.
 
 The assignment had 2 parts:
 1. Calculating the probabilities of a few random sentences that were given to us:
-	a. Unigram sentence probability calculation using Laplace Smoothing.
-	b. Bigram sentence probability calculation using Backoff algorithm.
-	c. Trigram aentence probability calculation using Linear Interpolation.
+	**a.** Unigram sentence probability calculation using Laplace Smoothing.
+	**b.** Bigram sentence probability calculation using Backoff algorithm.
+	**c.** Trigram aentence probability calculation using Linear Interpolation.
 	
 2. Generate random sentences using unigrams vs bigrams vs trigrams.
 
@@ -32,15 +32,15 @@ The assignment had 2 parts:
 	
 	#### Examples of randomized sentences that are made out of the full corpus that contains all 5 countries:
 	
-	A. Based on unigrams:
+	**A.** Based on unigrams:
 	
 	![image](https://user-images.githubusercontent.com/49001453/99429709-09c4b000-2911-11eb-8adf-da1b4f49d39c.png)
 	
-	B. Based on bigrams:
+	**B.** Based on bigrams:
 	
 	![image](https://user-images.githubusercontent.com/49001453/99429870-3d9fd580-2911-11eb-927a-7c34ec1655a1.png)
 	
-	C. Based on trigrams:
+	**C.** Based on trigrams:
 	
 	![image](https://user-images.githubusercontent.com/49001453/99429959-5ad4a400-2911-11eb-9092-ef07a518376f.png)
 	
@@ -53,23 +53,23 @@ The assignment had 2 parts:
 	
 	#### Examples of randomized sentences that are made out of partial corpus:
 	
-    A. Examples of randomized sentences that are made only out of the Albania Corpus.
+    **A.** Examples of randomized sentences that are made only out of the Albania Corpus.
 
 	![image](https://user-images.githubusercontent.com/49001453/99433169-d9cbdb80-2915-11eb-89e9-2c213c762372.png)
 	
-	B. Examples of randomized sentences that are made only out of the Argentina Corpus.
+	**B.** Examples of randomized sentences that are made only out of the Argentina Corpus.
 	
 	![image](https://user-images.githubusercontent.com/49001453/99433282-fc5df480-2915-11eb-914e-5c867d93a414.png)
 	
-	C. Examples of randomized sentences that are made only out of the Cyprus Corpus.
+	**C.** Examples of randomized sentences that are made only out of the Cyprus Corpus.
 
 	![image](https://user-images.githubusercontent.com/49001453/99433794-a63d8100-2916-11eb-9f3c-c0ea3509f5f3.png)	
 	
-	D. Examples of randomized sentences that are made only out of the Georgia Corpus.
+	**D.** Examples of randomized sentences that are made only out of the Georgia Corpus.
 
 	![image](https://user-images.githubusercontent.com/49001453/99194884-18815a80-278b-11eb-9269-fce85fc03391.png)
 	
-	E. Examples of randomized sentences that are made only out of the Malta Corpus.
+	**E.** Examples of randomized sentences that are made only out of the Malta Corpus.
 	
 	![image](https://user-images.githubusercontent.com/49001453/99433411-26171b80-2916-11eb-9b2f-e9b034b59e82.png)
 
@@ -80,7 +80,35 @@ The assignment had 2 parts:
 	On the trigrams structure, some of the sentences make a little more sense, and sometimes they are even fully coherent.
 	Of course, some of them are could be just the original sentences.
 	
-	Note: Every randomized sentence is independent and doesn't rely on the sentence before it.
+	**Note:** Every randomized sentence is independent and doesn't rely on the sentence before it.
 	
+	
+## Text Classification
+	
+This assignment has 2 parts:
+
+1. Author Identification
+2. Native Language Identification
+
+The output TXT files from the tokenizer assignment is the input files for this assignment.
+
+###Author Identification
+The input to this task are all the sentences of the 2 most frequent users from Argentina.
+The purpose is to classify the sentences to identify which user wrote the sentence.
+Each classification unit in this task is a sentence.
+
+###Native Language Identification
+The input to this task are 5 files: each file has all the sentences of the 10 most frequent users from one of the countries (Albania, Argentina, Cyprus, Georgia and Malta).
+The purpose is to classify the sentences to identify the country of the author.
+Each classification unit in this task is built from 20 sentences.
 
 
+Each of the tasks classified by 3 three types of features:
+1. Bag Of Words (all of the words in the corpus).
+2. Manual features (features I chose manually to improve the accuracy)
+3. 100 best words (100 best words to classify chosen automatically by k-best function).
+The classification using Linear Regression and Multinomial Naive Bais.
+After the classification, we make a ten fold cross validation to calculate the accuracy.
+
+The classification results:
+![classificationResults](https://user-images.githubusercontent.com/49001453/100139758-9b479b00-2e98-11eb-93ff-45e122fabb7c.PNG)
