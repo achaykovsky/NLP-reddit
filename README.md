@@ -92,12 +92,12 @@ This assignment has 2 parts:
 
 The output TXT files from the tokenizer assignment is the input files for this assignment.
 
-###Author Identification
+### Author Identification
 The input to this task are all the sentences of the 2 most frequent users from Argentina.
 The purpose is to classify the sentences to identify which user wrote the sentence.
 Each classification unit in this task is a sentence.
 
-###Native Language Identification
+### Native Language Identification
 The input to this task are 5 files: each file has all the sentences of the 10 most frequent users from one of the countries (Albania, Argentina, Cyprus, Georgia and Malta).
 The purpose is to classify the sentences to identify the country of the author.
 Each classification unit in this task is built from 20 sentences.
@@ -111,4 +111,5 @@ The classification using Linear Regression and Multinomial Naive Bais.
 After the classification, we make a ten fold cross validation to calculate the accuracy.
 
 The classification results:
+
 ![classificationResults](https://user-images.githubusercontent.com/49001453/100139758-9b479b00-2e98-11eb-93ff-45e122fabb7c.PNG)
