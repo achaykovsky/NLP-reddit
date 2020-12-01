@@ -161,6 +161,7 @@ The purpose was to compare the classification methods with differenet weights us
 **4.** f1
 
 **Note:** The model was created using Word2Vec from the genism library:
+
 `self_trained_model = Word2Vec(sentences, size=300, min_count=10) self_trained_model.wv.save_word2vec_format(f'{outputDir}\model.vec')`
 
 ### The classification results:
