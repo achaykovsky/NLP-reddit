@@ -22,7 +22,7 @@ Albania, Argentina, Cyprus, Georgia and Malta.
 
 The assignment had 2 parts:
 
-1. Calculating the probabilities of a few random sentences that were given to us:
+**1.** Calculating the probabilities of a few random sentences that were given to us:
 
 	**a.** Unigram sentence probability calculation using Laplace Smoothing.
 	
@@ -30,7 +30,7 @@ The assignment had 2 parts:
 	
 	**c.** Trigram aentence probability calculation using Linear Interpolation.
 	
-2. Generate random sentences using unigrams vs bigrams vs trigrams.
+**2.** Generate random sentences using unigrams vs bigrams vs trigrams.
 
 	Some examples of the results:
 	
@@ -91,8 +91,8 @@ The assignment had 2 parts:
 	
 This assignment has 2 parts:
 
-1. Author Identification
-2. Native Language Identification
+**1.** Author Identification
+**2.** Native Language Identification (NLI)
 
 The output TXT files from the tokenizer assignment is the input files for this assignment.
 
@@ -108,14 +108,48 @@ Each classification unit in this task is built from 20 sentences.
 
 
 Each of the tasks classified by 3 three types of features:
-1. Bag Of Words (all of the words in the corpus).
-2. Manual features (features I chose manually to improve the accuracy)
-3. 100 best words (100 best words to classify chosen automatically by k-best function).
+**1.** Bag Of Words (all of the words in the corpus).
+**2.** Manual features (features I chose manually to improve the accuracy)
+**3.** 100 best words (100 best words to classify chosen automatically by k-best function).
 
-The classification using Linear Regression and Multinomial Naive Bais.
+The classifiers are Linear Regression and Multinomial Naive Bais.
 
 After the classification, we make a ten fold cross validation to calculate the accuracy.
 
 **The classification results:**
 
 ![classificationResults](https://user-images.githubusercontent.com/49001453/100139758-9b479b00-2e98-11eb-93ff-45e122fabb7c.PNG)
+
+
+## Classification using Word Embeddings
+
+The corpus in this task is devided to chuncks, where each chunk made from 20 sentences.
+
+The classifier is Logistic Regression.
+
+The task is to make a NLI (Native Language Identification) classification using word embeddings of 2 kinds:
+	**1.** The first word embedding model is based on the 100K most frequent words in English that was trained on Wikipedia.
+	**2.** The second word embedding model is the model that was trained on my corpus. 
+
+The classification was made in 3 ways:
+	**1.** Each word in the sentence gets the same weight (weight = 1)
+	**2.** Each word in the sentence gets a random weight in the interval (0,1)
+	**3.** Words that were chosen manually that give the biggest contribition, get higher weight (The words were chosen by k-best function).
+	
+The feature vector of each chunk is calculated by this formula:
+![weightCalculation](https://user-images.githubusercontent.com/49001453/100552299-00333480-328f-11eb-806e-9c3cdca4cac4.PNG)
+Wi - is the weight of the i word.
+Vi - is the vector representing the i word in the word embedding model.
+k - is the number of words in the chunk.
+
+The purpose was to compare the classification methods with differenet weights using 4 measures with a ten fold cross validation:
+	**1**. Accuracy
+	**2.** Precision
+	**3.** Recall
+	**4.** f1
+
+**Note:** The model was created using Word2Vec from the genism library:
+`self_trained_model = Word2Vec(sentences, size=300, min_count=10) self_trained_model.wv.save_word2vec_format(f'{outputDir}\model.vec')`
+
+### The classification results:
+![classificationResults-hw4](https://user-images.githubusercontent.com/49001453/100552045-530bec80-328d-11eb-8b66-b1f386f23e09.PNG)
